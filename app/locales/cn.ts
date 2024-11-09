@@ -15,7 +15,7 @@ const cn = {
     Return: "返回",
     Title: "请提供应用密钥🔑",
     Tips: "请输入",
-    SubTips: "使用 OpenAI API_KEY (Official) / Google AI Studio API_KEY",
+    SubTips: "使用 OpenAI API_KEY (官方) / Google AI Studio API_KEY",
     Input: "<应用密钥>",
     Confirm: "确认",
     Later: "稍后再说",
