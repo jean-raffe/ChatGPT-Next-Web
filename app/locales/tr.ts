@@ -1,33 +1,24 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const tr: PartialLocaleType = {
-  WIP: "Çalışma devam ediyor...",
+  WIP: "Bu özellik hala geliştirilme aşamasında...",
   Error: {
     Unauthorized: isApp
-      ? `😆 Sohbet bazı sorunlarla karşılaştı, endişelenmeyin:
-    \\ 1️⃣ Eğer sıfır yapılandırma ile başlamak istiyorsanız, [buraya tıklayarak hemen sohbete başlayın 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ Kendi OpenAI kaynaklarınızı kullanmak istiyorsanız, [buraya tıklayarak](/#/settings) ayarları değiştirin ⚙️`
-      : `😆 Sohbet bazı sorunlarla karşılaştı, endişelenmeyin:
-    \ 1️⃣ Eğer sıfır yapılandırma ile başlamak istiyorsanız, [buraya tıklayarak hemen sohbete başlayın 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ Eğer özel dağıtım sürümü kullanıyorsanız, [buraya tıklayarak](/#/auth) erişim anahtarını girin 🔑
-    \ 3️⃣ Kendi OpenAI kaynaklarınızı kullanmak istiyorsanız, [buraya tıklayarak](/#/settings) ayarları değiştirin ⚙️
- `,
+      ? `Erişim doğrulanmadı. Lütfen [uygulama anahtarını sağlayın](/#/auth)🔑 `
+      : `Erişim doğrulanmadı. Lütfen [uygulama anahtarını sağlayın](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Şifre Gerekli",
-    Tips: "Yönetici şifre doğrulamasını etkinleştirdi, lütfen aşağıya erişim kodunu girin",
-    SubTips: "Veya OpenAI veya Google API anahtarınızı girin",
-    Input: "Erişim kodunu buraya girin",
+    Return: "Geri Dön",
+    Title: "Lütfen uygulama anahtarını sağlayın🔑",
+    Tips: "Lütfen girin",
+    SubTips: "OpenAI API_KEY (resmi) / Google AI Studio API_KEY kullanın",
+    Input: "<uygulama anahtarı>",
     Confirm: "Onayla",
     Later: "Sonra",
-    Return: "Geri",
-    SaasTips: "Ayarlar çok karmaşık, hemen kullanmak istiyorum",
-    TopTips:
-      "🥳 NextChat AI lansman teklifi, OpenAI o1, GPT-4o, Claude-3.5 ve en son büyük modelleri şimdi açın",
+    TopTips: "Sen benim en güzel tesadüfümsün.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} konuşma`,

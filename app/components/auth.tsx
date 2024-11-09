@@ -2,7 +2,6 @@ import styles from "./auth.module.scss";
 import { IconButton } from "./button";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Path, SAAS_CHAT_URL } from "../constant";
 import { useAccessStore } from "../store";
 import Locale from "../locales";
 import Delete from "../icons/close.svg";
@@ -27,10 +26,6 @@ export function AuthPage() {
   const accessStore = useAccessStore();
   const goHome = () => navigate(Path.Home);
   const goChat = () => navigate(Path.Chat);
-  const goSaas = () => {
-    trackAuthorizationPageButtonToCPaymentClick();
-    window.location.href = SAAS_CHAT_URL;
-  };
 
   const resetAccessCode = () => {
     accessStore.update((access) => {
@@ -109,19 +104,6 @@ export function AuthPage() {
         </>
       ) : null}
 
-      <div className={styles["auth-actions"]}>
-        <IconButton
-          text={Locale.Auth.Confirm}
-          type="primary"
-          onClick={goChat}
-        />
-        <IconButton
-          text={Locale.Auth.SaasTips}
-          onClick={() => {
-            goSaas();
-          }}
-        />
-      </div>
     </div>
   );
 }

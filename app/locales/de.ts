@@ -1,34 +1,25 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const de: PartialLocaleType = {
-  WIP: "In Bearbeitung...",
+  WIP: "Diese Funktion befindet sich noch in der Entwicklung...",
   Error: {
     Unauthorized: isApp
-      ? `😆 Das Gespräch hatte einige Probleme, keine Sorge:
-    \\ 1️⃣ Wenn du ohne Konfiguration sofort starten möchtest, [klicke hier, um sofort zu chatten 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ Wenn du deine eigenen OpenAI-Ressourcen verwenden möchtest, klicke [hier](/#/settings), um die Einstellungen zu ändern ⚙️`
-      : `😆 Das Gespräch hatte einige Probleme, keine Sorge:
-    \ 1️⃣ Wenn du ohne Konfiguration sofort starten möchtest, [klicke hier, um sofort zu chatten 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ Wenn du eine private Bereitstellung verwendest, klicke [hier](/#/auth), um den Zugriffsschlüssel einzugeben 🔑
-    \ 3️⃣ Wenn du deine eigenen OpenAI-Ressourcen verwenden möchtest, klicke [hier](/#/settings), um die Einstellungen zu ändern ⚙️
- `,
+      ? `Zugriff nicht verifiziert. Bitte [App-Schlüssel bereitstellen](/#/auth)🔑 `
+      : `Zugriff nicht verifiziert. Bitte [App-Schlüssel bereitstellen](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Passwort erforderlich",
-    Tips: "Der Administrator hat die Passwortüberprüfung aktiviert. Bitte geben Sie den Zugangscode unten ein.",
-    SubTips: "Oder geben Sie Ihren OpenAI oder Google API-Schlüssel ein.",
-    Input: "Geben Sie hier den Zugangscode ein",
+    Return: "Zurück",
+    Title: "Bitte App-Schlüssel bereitstellen🔑",
+    Tips: "Bitte eingeben",
+    SubTips: "Verwenden Sie OpenAI API_KEY (offiziell) / Google AI Studio API_KEY",
+    Input: "<App-Schlüssel>",
     Confirm: "Bestätigen",
     Later: "Später",
-    Return: "Zurück",
-    SaasTips:
-      "Die Konfiguration ist zu kompliziert, ich möchte es sofort nutzen",
     TopTips:
-      "🥳 NextChat AI Einführungsangebot, schalte jetzt OpenAI o1, GPT-4o, Claude-3.5 und die neuesten großen Modelle frei",
+      "Du bist mein schönster Zufall.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} Gespräche`,

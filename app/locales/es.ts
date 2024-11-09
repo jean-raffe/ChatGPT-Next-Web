@@ -1,34 +1,24 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const es: PartialLocaleType = {
-  WIP: "En construcción...",
+  WIP: "Esta función está en desarrollo...",
   Error: {
     Unauthorized: isApp
-      ? `😆 La conversación encontró algunos problemas, no te preocupes:
-    \\ 1️⃣ Si deseas comenzar sin configuración, [haz clic aquí para empezar a chatear inmediatamente 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ Si deseas usar tus propios recursos de OpenAI, haz clic [aquí](/#/settings) para modificar la configuración ⚙️`
-      : `😆 La conversación encontró algunos problemas, no te preocupes:
-    \ 1️⃣ Si deseas comenzar sin configuración, [haz clic aquí para empezar a chatear inmediatamente 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ Si estás utilizando una versión de implementación privada, haz clic [aquí](/#/auth) para ingresar la clave de acceso 🔑
-    \ 3️⃣ Si deseas usar tus propios recursos de OpenAI, haz clic [aquí](/#/settings) para modificar la configuración ⚙️
- `,
+      ? `Acceso no verificado. Por favor, [proporcione la clave de la aplicación](/#/auth)🔑 `
+      : `Acceso no verificado. Por favor, [proporcione la clave de la aplicación](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Se requiere contraseña",
-    Tips: "El administrador ha habilitado la verificación de contraseña. Introduce el código de acceso a continuación",
-    SubTips: "O ingresa tu clave API de OpenAI o Google",
-    Input: "Introduce el código de acceso aquí",
+    Return: "Regresar",
+    Title: "Por favor, proporcione la clave de la aplicación🔑",
+    Tips: "Por favor, ingrese",
+    SubTips: "Use OpenAI API_KEY (oficial) / Google AI Studio API_KEY",
+    Input: "<clave de la aplicación>",
     Confirm: "Confirmar",
     Later: "Más tarde",
-    Return: "Regresar",
-    SaasTips:
-      "La configuración es demasiado complicada, quiero usarlo de inmediato",
-    TopTips:
-      "🥳 Oferta de lanzamiento de NextChat AI, desbloquea OpenAI o1, GPT-4o, Claude-3.5 y los últimos grandes modelos",
+    TopTips: "Eres mi serendipia más hermosa.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} conversaciones`,

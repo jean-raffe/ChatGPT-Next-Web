@@ -1,33 +1,24 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const id: PartialLocaleType = {
-  WIP: "Coming Soon...",
+  WIP: "Fitur ini masih dalam pengembangan...",
   Error: {
     Unauthorized: isApp
-      ? `😆 Percakapan mengalami beberapa masalah, tidak perlu khawatir:
-   \\ 1️⃣ Jika Anda ingin memulai tanpa konfigurasi, [klik di sini untuk mulai mengobrol segera 🚀](${SAAS_CHAT_UTM_URL})
-   \\ 2️⃣ Jika Anda ingin menggunakan sumber daya OpenAI Anda sendiri, klik [di sini](/#/settings) untuk mengubah pengaturan ⚙️`
-      : `😆 Percakapan mengalami beberapa masalah, tidak perlu khawatir:
-   \ 1️⃣ Jika Anda ingin memulai tanpa konfigurasi, [klik di sini untuk mulai mengobrol segera 🚀](${SAAS_CHAT_UTM_URL})
-   \ 2️⃣ Jika Anda menggunakan versi penyebaran pribadi, klik [di sini](/#/auth) untuk memasukkan kunci akses 🔑
-   \ 3️⃣ Jika Anda ingin menggunakan sumber daya OpenAI Anda sendiri, klik [di sini](/#/settings) untuk mengubah pengaturan ⚙️
-`,
+      ? `Akses belum diverifikasi. Silakan [berikan kunci aplikasi](/#/auth)🔑 `
+      : `Akses belum diverifikasi. Silakan [berikan kunci aplikasi](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Kebutuhan Kata Sandi",
-    Tips: "Administrator telah mengaktifkan verifikasi kata sandi, silakan masukkan kode akses di bawah ini",
-    SubTips: "Atau masukkan kunci API OpenAI atau Google Anda",
-    Input: "Masukkan kode akses di sini",
+    Return: "Kembali",
+    Title: "Silakan berikan kunci aplikasi🔑",
+    Tips: "Silakan masukkan",
+    SubTips: "Gunakan OpenAI API_KEY (resmi) / Google AI Studio API_KEY",
+    Input: "<kunci aplikasi>",
     Confirm: "Konfirmasi",
     Later: "Nanti",
-    Return: "Kembali",
-    SaasTips: "Konfigurasi terlalu rumit, saya ingin menggunakannya segera",
-    TopTips:
-      "🥳 Penawaran Peluncuran NextChat AI, buka OpenAI o1, GPT-4o, Claude-3.5 dan model besar terbaru sekarang",
+    TopTips: "Kamu adalah kejutan terindah dalam hidupku.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} percakapan`,

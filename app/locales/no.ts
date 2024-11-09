@@ -1,34 +1,24 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const no: PartialLocaleType = {
-  WIP: "Arbeid pågår ...",
+  WIP: "Denne funksjonen er under utvikling...",
   Error: {
     Unauthorized: isApp
-      ? `😆 Samtalen har støtt på noen problemer, ikke bekymre deg:
-    \\ 1️⃣ Hvis du vil starte uten konfigurasjon, [klikk her for å begynne å chatte umiddelbart 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ Hvis du vil bruke dine egne OpenAI-ressurser, klikk [her](/#/settings) for å endre innstillingene ⚙️`
-      : `😆 Samtalen har støtt på noen problemer, ikke bekymre deg:
-    \ 1️⃣ Hvis du vil starte uten konfigurasjon, [klikk her for å begynne å chatte umiddelbart 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ Hvis du bruker en privat distribusjonsversjon, klikk [her](/#/auth) for å skrive inn tilgangsnøkkelen 🔑
-    \ 3️⃣ Hvis du vil bruke dine egne OpenAI-ressurser, klikk [her](/#/settings) for å endre innstillingene ⚙️
- `,
+      ? `Tilgang ikke verifisert. Vennligst [gi appnøkkel](/#/auth)🔑 `
+      : `Tilgang ikke verifisert. Vennligst [gi appnøkkel](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Passord påkrevd",
-    Tips: "Administrator har aktivert passordbeskyttelse. Vennligst skriv inn tilgangskoden nedenfor",
-    SubTips: "Eller skriv inn din OpenAI eller Google API-nøkkel",
-    Input: "Skriv tilgangskoden her",
-    Confirm: "Bekreft",
-    Later: "Kom tilbake senere",
     Return: "Tilbake",
-    SaasTips:
-      "Konfigurasjonen er for komplisert, jeg vil bruke det med en gang",
-    TopTips:
-      "🥳 NextChat AI lanseringstilbud, lås opp OpenAI o1, GPT-4o, Claude-3.5 og de nyeste store modellene nå",
+    Title: "Vennligst gi appnøkkel🔑",
+    Tips: "Vennligst skriv inn",
+    SubTips: "Bruk OpenAI API_KEY (offisiell) / Google AI Studio API_KEY",
+    Input: "<appnøkkel>",
+    Confirm: "Bekreft",
+    Later: "Senere",
+    TopTips: "Du er min vakreste tilfeldighet.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} samtaler`,

@@ -1,33 +1,25 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const cs: PartialLocaleType = {
-  WIP: "V přípravě...",
+  WIP: "Tato funkce je stále ve vývoji...",
   Error: {
     Unauthorized: isApp
-      ? `😆 Rozhovor narazil na nějaké problémy, nebojte se:
-    \\ 1️⃣ Pokud chcete začít bez konfigurace, [klikněte sem pro okamžitý začátek chatu 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ Pokud chcete využít své vlastní zdroje OpenAI, klikněte [sem](/#/settings) a upravte nastavení ⚙️`
-      : `😆 Rozhovor narazil na nějaké problémy, nebojte se:
-    \ 1️⃣ Pokud chcete začít bez konfigurace, [klikněte sem pro okamžitý začátek chatu 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ Pokud používáte verzi soukromého nasazení, klikněte [sem](/#/auth) a zadejte přístupový klíč 🔑
-    \ 3️⃣ Pokud chcete využít své vlastní zdroje OpenAI, klikněte [sem](/#/settings) a upravte nastavení ⚙️
- `,
+      ? `Přístup nebyl ověřen, prosím [poskytněte aplikační klíč](/#/auth)🔑 `
+      : `Přístup nebyl ověřen, prosím [poskytněte aplikační klíč](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Potřebné heslo",
-    Tips: "Administrátor povolil ověření heslem, prosím zadejte přístupový kód níže",
-    SubTips: "nebo zadejte svůj OpenAI nebo Google API klíč",
-    Input: "Zadejte přístupový kód zde",
+    Return: "Zpět",
+    Title: "Prosím, poskytněte aplikační klíč🔑",
+    Tips: "Prosím, zadejte",
+    SubTips: "Použijte OpenAI API_KEY (oficiální) / Google AI Studio API_KEY",
+    Input: "<aplikační klíč>",
     Confirm: "Potvrdit",
     Later: "Později",
-    Return: "Návrat",
-    SaasTips: "Konfigurace je příliš složitá, chci okamžitě začít používat",
     TopTips:
-      "🥳 Uvítací nabídka NextChat AI, okamžitě odemkněte OpenAI o1, GPT-4o, Claude-3.5 a nejnovější velké modely",
+      "Jsi moje nejkrásnější náhoda.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} konverzací`,

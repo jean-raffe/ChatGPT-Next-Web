@@ -1,6 +1,5 @@
 import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 
 const isApp = !!getClientConfig()?.isApp;
 
@@ -19,7 +18,6 @@ const cn = {
     Input: "<应用密钥>",
     Confirm: "确认",
     Later: "稍后再说",
-    SaasTips: "使用 NextChat 提供的收费服务",
     TopTips:
       " You're my most beautiful serendipity. ",
   },

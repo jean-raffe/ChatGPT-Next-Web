@@ -1,33 +1,24 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const jp: PartialLocaleType = {
-  WIP: "この機能は開発中です",
+  WIP: "この機能はまだ開発中です...",
   Error: {
     Unauthorized: isApp
-      ? `😆 会話中に問題が発生しましたが、心配しないでください:
-    \\ 1️⃣ 設定なしで始めたい場合は、[ここをクリックしてすぐにチャットを開始 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ 自分のOpenAIリソースを使用したい場合は、[ここをクリックして](/#/settings)設定を変更してください ⚙️`
-      : `😆 会話中に問題が発生しましたが、心配しないでください:
-    \ 1️⃣ 設定なしで始めたい場合は、[ここをクリックしてすぐにチャットを開始 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ プライベートデプロイ版を使用している場合は、[ここをクリックして](/#/auth)アクセストークンを入力してください 🔑
-    \ 3️⃣ 自分のOpenAIリソースを使用したい場合は、[ここをクリックして](/#/settings)設定を変更してください ⚙️
- `,
+      ? `アクセスが未認証です。アプリキーを[提供してください](/#/auth)🔑 `
+      : `アクセスが未認証です。アプリキーを[提供してください](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "パスワードが必要です",
-    Tips: "管理者がパスワード認証を有効にしました。以下にアクセスコードを入力してください",
-    SubTips: "または、OpenAIまたはGoogle APIキーを入力してください",
-    Input: "ここにアクセスコードを入力",
+    Return: "戻る",
+    Title: "アプリキーを提供してください🔑",
+    Tips: "入力してください",
+    SubTips: "OpenAI API_KEY（公式） / Google AI Studio API_KEY を使用",
+    Input: "<アプリキー>",
     Confirm: "確認",
     Later: "後で",
-    Return: "戻る",
-    SaasTips: "設定が面倒すぎる、すぐに使いたい",
-    TopTips:
-      "🥳 NextChat AIの発売特典で、OpenAI o1、GPT-4o、Claude-3.5などの最新の大規模モデルを今すぐアンロック",
+    TopTips: "あなたは私の最も美しい偶然です。",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count}件の会話`,

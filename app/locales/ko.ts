@@ -1,33 +1,24 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const ko: PartialLocaleType = {
-  WIP: "곧 출시 예정...",
+  WIP: "이 기능은 아직 개발 중입니다...",
   Error: {
     Unauthorized: isApp
-      ? `😆 대화 중 문제가 발생했습니다, 걱정하지 마세요:
-    \\ 1️⃣ 제로 구성으로 시작하고 싶다면, [여기를 클릭하여 즉시 대화를 시작하세요 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ 자신의 OpenAI 리소스를 사용하고 싶다면, [여기를 클릭하여](/#/settings) 설정을 수정하세요 ⚙️`
-      : `😆 대화 중 문제가 발생했습니다, 걱정하지 마세요:
-    \ 1️⃣ 제로 구성으로 시작하고 싶다면, [여기를 클릭하여 즉시 대화를 시작하세요 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ 개인 배포 버전을 사용하고 있다면, [여기를 클릭하여](/#/auth) 접근 키를 입력하세요 🔑
-    \ 3️⃣ 자신의 OpenAI 리소스를 사용하고 싶다면, [여기를 클릭하여](/#/settings) 설정을 수정하세요 ⚙️
- `,
+      ? `접근 권한이 인증되지 않았습니다. [앱 키를 제공해 주세요](/#/auth)🔑 `
+      : `접근 권한이 인증되지 않았습니다. [앱 키를 제공해 주세요](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "비밀번호 필요",
-    Tips: "관리자가 비밀번호 인증을 활성화했습니다. 아래에 접근 코드를 입력하십시오.",
-    SubTips: "또는 OpenAI 또는 Google API 키를 입력하십시오.",
-    Input: "여기에 접근 코드를 입력하십시오.",
-    Confirm: "확인",
-    Later: "나중에 하기",
     Return: "돌아가기",
-    SaasTips: "설정이 너무 복잡합니다. 즉시 사용하고 싶습니다.",
-    TopTips:
-      "🥳 NextChat AI 출시 기념 할인, 지금 OpenAI o1, GPT-4o, Claude-3.5 및 최신 대형 모델을 해제하세요",
+    Title: "앱 키를 제공해 주세요🔑",
+    Tips: "입력해 주세요",
+    SubTips: "OpenAI API_KEY (공식) / Google AI Studio API_KEY 사용",
+    Input: "<앱 키>",
+    Confirm: "확인",
+    Later: "나중에",
+    TopTips: "당신은 나의 가장 아름다운 우연의 일치입니다.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 개의 대화`,

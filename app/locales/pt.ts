@@ -1,33 +1,24 @@
 import { SubmitKey } from "../store/config";
 import { PartialLocaleType } from "../locales/index";
 import { getClientConfig } from "../config/client";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const pt: PartialLocaleType = {
-  WIP: "Em breve...",
+  WIP: "Este recurso ainda está em desenvolvimento...",
   Error: {
     Unauthorized: isApp
-      ? `😆 A conversa encontrou alguns problemas, não se preocupe:
-   \\ 1️⃣ Se você quiser começar sem configuração, [clique aqui para começar a conversar imediatamente 🚀](${SAAS_CHAT_UTM_URL})
-   \\ 2️⃣ Se você deseja usar seus próprios recursos OpenAI, clique [aqui](/#/settings) para modificar as configurações ⚙️`
-      : `😆 A conversa encontrou alguns problemas, não se preocupe:
-   \ 1️⃣ Se você quiser começar sem configuração, [clique aqui para começar a conversar imediatamente 🚀](${SAAS_CHAT_UTM_URL})
-   \ 2️⃣ Se você estiver usando uma versão de implantação privada, clique [aqui](/#/auth) para inserir a chave de acesso 🔑
-   \ 3️⃣ Se você deseja usar seus próprios recursos OpenAI, clique [aqui](/#/settings) para modificar as configurações ⚙️
-`,
+      ? `Acesso não verificado. Por favor, [forneça a chave do aplicativo](/#/auth)🔑 `
+      : `Acesso não verificado. Por favor, [forneça a chave do aplicativo](/#/auth)🔑 `,
   },
   Auth: {
-    Title: "Necessário Código de Acesso",
-    Tips: "Por favor, insira o código de acesso abaixo",
-    SubTips: "Ou insira sua Chave API OpenAI",
-    Input: "código de acesso",
+    Return: "Retornar",
+    Title: "Por favor, forneça a chave do aplicativo🔑",
+    Tips: "Por favor, insira",
+    SubTips: "Use OpenAI API_KEY (oficial) / Google AI Studio API_KEY",
+    Input: "<chave do aplicativo>",
     Confirm: "Confirmar",
-    Later: "Depois",
-    Return: "Voltar",
-    SaasTips: "A configuração é muito complicada, quero usá-la imediatamente",
-    TopTips:
-      "🥳 Oferta de Lançamento do NextChat AI, desbloqueie o OpenAI o1, GPT-4o, Claude-3.5 e os mais recentes grandes modelos agora",
+    Later: "Mais tarde",
+    TopTips: "Você é minha mais bela coincidência.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} mensagens`,

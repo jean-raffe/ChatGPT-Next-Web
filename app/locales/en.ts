@@ -1,7 +1,6 @@
 import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
 import { LocaleType } from "./index";
-import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 // if you are adding a new translation, please use PartialLocaleType instead of LocaleType
 
 const isApp = !!getClientConfig()?.isApp;
@@ -20,7 +19,6 @@ const en: LocaleType = {
     Input: "<App Key>",
     Confirm: "Confirm",
     Later: "Maybe later",
-    SaasTips: "Using NextChat's paid service",
     TopTips:
       " You're my most beautiful serendipity. ",
   },
