@@ -8,26 +8,20 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? `😆 对话遇到了一些问题，不用慌:
-       \\ 1️⃣ 想要零配置开箱即用，[点击这里立刻开启对话 🚀](${SAAS_CHAT_UTM_URL})
-       \\ 2️⃣ 如果你想消耗自己的 OpenAI 资源，点击[这里](/#/settings)修改设置 ⚙️`
-      : `😆 对话遇到了一些问题，不用慌:
-       \ 1️⃣ 想要零配置开箱即用，[点击这里立刻开启对话 🚀](${SAAS_CHAT_UTM_URL})
-       \ 2️⃣ 如果你正在使用私有部署版本，点击[这里](/#/auth)输入访问秘钥 🔑
-       \ 3️⃣ 如果你想消耗自己的 OpenAI 资源，点击[这里](/#/settings)修改设置 ⚙️
-       `,
+      ? `当目前还没有验证访问权限，请[提供应用密钥]🔑 (/#/auth)`
+      : `当目前还没有验证访问权限，请[提供应用密钥]🔑 (/#/auth)`,
   },
   Auth: {
     Return: "返回",
-    Title: "需要密码",
-    Tips: "管理员开启了密码验证，请在下方填入访问码",
-    SubTips: "或者输入你的 OpenAI 或 Google AI 密钥",
-    Input: "在此处填写访问码",
+    Title: "请提供应用密钥🔑",
+    Tips: "请输入",
+    SubTips: "使用 OpenAI API_KEY (Official) / Google AI Studio API_KEY",
+    Input: "<应用密钥>",
     Confirm: "确认",
     Later: "稍后再说",
-    SaasTips: "配置太麻烦，想要立即使用",
+    SaasTips: "使用 NextChat 提供的收费服务",
     TopTips:
-      "🥳 NextChat AI 首发优惠，立刻解锁 OpenAI o1, GPT-4o, Claude-3.5 等最新大模型",
+      " You're my most beautiful serendipity. ",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
