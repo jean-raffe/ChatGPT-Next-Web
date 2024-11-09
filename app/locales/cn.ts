@@ -8,8 +8,8 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? `当目前还没有验证访问权限，请[提供应用密钥]🔑 (/#/auth)`
-      : `当目前还没有验证访问权限，请[提供应用密钥]🔑 (/#/auth)`,
+      ? `当目前还没有验证访问权限，请[提供应用密钥](/#/auth)🔑 `
+      : `当目前还没有验证访问权限，请[提供应用密钥](/#/auth)🔑 `,
   },
   Auth: {
     Return: "返回",
@@ -67,8 +67,8 @@ const cn = {
       ToBottom: "滚到最新",
       Theme: {
         auto: "自动主题",
-        light: "亮色模式",
-        dark: "深色模式",
+        light: "灰白",
+        dark: "黑金",
       },
       Prompt: "快捷指令",
       Masks: "所有面具",
@@ -304,17 +304,10 @@ const cn = {
     },
 
     Access: {
-      SaasStart: {
-        Title: "使用 NextChat AI",
-        Label: "（性价比最高的方案）",
-        SubTitle:
-          "由 NextChat 官方维护, 零配置开箱即用，支持 OpenAI o1, GPT-4o, Claude-3.5 等最新大模型",
-        ChatNow: "立刻对话",
-      },
       AccessCode: {
-        Title: "访问密码",
-        SubTitle: "管理员已开启加密访问",
-        Placeholder: "请输入访问密码",
+        Title: "App Key Required",
+        SubTitle: "会话需要应用验证密钥",
+        Placeholder: "验证密钥",
       },
       CustomEndpoint: {
         Title: "自定义接口",
@@ -558,9 +551,9 @@ const cn = {
     },
   },
   Store: {
-    DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
-    Error: "出错了，稍后重试吧",
+    DefaultTopic: " New Conversation ",
+    BotHello: " You're my most beautiful serendipity. ",
+    Error: "发生错误，请稍后重试",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
       Topic:
