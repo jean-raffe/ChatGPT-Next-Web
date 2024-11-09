@@ -497,7 +497,7 @@ const en: LocaleType = {
         ApiKey: {
           Title: "API Key",
           SubTitle: "Obtain your API Key from Google AI",
-          Placeholder: "Google AI API Key",
+          Placeholder: "Google AI Studio API Key",
         },
 
         Endpoint: {
