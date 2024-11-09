@@ -7,27 +7,20 @@ const tw = {
   WIP: "此功能仍在開發中……",
   Error: {
     Unauthorized: isApp
-      ? `😆 對話遇到了一些問題，不用慌:
-    \\ 1️⃣ 想要無須設定開箱即用，[點選這裡立刻開啟對話 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ 如果你想消耗自己的 OpenAI 資源，點選[這裡](/#/settings)修改設定 ⚙️`
-      : `😆 對話遇到了一些問題，不用慌:
-    \ 1️⃣ 想要無須設定開箱即用，[點選這裡立刻開啟對話 🚀](${SAAS_CHAT_UTM_URL})
-    \ 2️⃣ 如果你正在使用私有部署版本，點選[這裡](/#/auth)輸入存取金鑰 🔑
-    \ 3️⃣ 如果你想消耗自己的 OpenAI 資源，點選[這裡](/#/settings)修改設定 ⚙️
- `,
+      ? `當前尚未驗證訪問權限，請[提供應用密鑰]🔑 (/#/auth)`
+      : `當前尚未驗證訪問權限，請[提供應用密鑰]🔑 (/#/auth)`,
   },
-
   Auth: {
-    Title: "需要密碼",
-    Tips: "管理員開啟了密碼驗證，請在下方填入存取密碼",
-    SubTips: "或者輸入你的 OpenAI 或 Google API 金鑰",
-    Input: "在此處填寫存取密碼",
-    Confirm: "確認",
-    Later: "稍候再說",
     Return: "返回",
-    SaasTips: "設定太麻煩，想要立即使用",
+    Title: "請提供應用密鑰🔑",
+    Tips: "請輸入",
+    SubTips: "使用 OpenAI API_KEY (官方) / Google AI Studio API_KEY",
+    Input: "<應用密鑰>",
+    Confirm: "確認",
+    Later: "稍後再說",
+    SaasTips: "使用 NextChat 提供的收費服務",
     TopTips:
-      "🥳 NextChat AI 首發優惠，立刻解鎖 OpenAI o1, GPT-4o, Claude-3.5 等最新的大型語言模型",
+      " You're my most beautiful serendipity. ",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 則對話`,
