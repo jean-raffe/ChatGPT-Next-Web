@@ -1,14 +1,15 @@
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
 import { getClientConfig } from "../config/client";
+import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const de: PartialLocaleType = {
   WIP: "Diese Funktion befindet sich noch in der Entwicklung...",
   Error: {
     Unauthorized: isApp
-      ? `Zugriff nicht verifiziert. Bitte [App-Schlüssel bereitstellen](/#/auth)🔑 `
-      : `Zugriff nicht verifiziert. Bitte [App-Schlüssel bereitstellen](/#/auth)🔑 `,
+      ? `Zugriff nicht verifiziert. Bitte [App-Schlüssel bereitstellen](/#/settings)🔑 `
+      : `Zugriff nicht verifiziert. Bitte [App-Schlüssel bereitstellen](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Zurück",

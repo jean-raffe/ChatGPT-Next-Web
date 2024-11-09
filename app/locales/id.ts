@@ -7,8 +7,8 @@ const id: PartialLocaleType = {
   WIP: "Fitur ini masih dalam pengembangan...",
   Error: {
     Unauthorized: isApp
-      ? `Akses belum diverifikasi. Silakan [berikan kunci aplikasi](/#/auth)🔑 `
-      : `Akses belum diverifikasi. Silakan [berikan kunci aplikasi](/#/auth)🔑 `,
+      ? `Akses belum diverifikasi. Silakan [berikan kunci aplikasi](/#/settings)🔑 `
+      : `Akses belum diverifikasi. Silakan [berikan kunci aplikasi](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Kembali",

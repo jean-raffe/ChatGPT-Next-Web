@@ -7,8 +7,8 @@ const no: PartialLocaleType = {
   WIP: "Denne funksjonen er under utvikling...",
   Error: {
     Unauthorized: isApp
-      ? `Tilgang ikke verifisert. Vennligst [gi appnøkkel](/#/auth)🔑 `
-      : `Tilgang ikke verifisert. Vennligst [gi appnøkkel](/#/auth)🔑 `,
+      ? `Tilgang ikke verifisert. Vennligst [gi appnøkkel](/#/settings)🔑 `
+      : `Tilgang ikke verifisert. Vennligst [gi appnøkkel](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Tilbake",

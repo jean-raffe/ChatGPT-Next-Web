@@ -7,8 +7,8 @@ const tr: PartialLocaleType = {
   WIP: "Bu özellik hala geliştirilme aşamasında...",
   Error: {
     Unauthorized: isApp
-      ? `Erişim doğrulanmadı. Lütfen [uygulama anahtarını sağlayın](/#/auth)🔑 `
-      : `Erişim doğrulanmadı. Lütfen [uygulama anahtarını sağlayın](/#/auth)🔑 `,
+      ? `Erişim doğrulanmadı. Lütfen [uygulama anahtarını sağlayın](/#/settings)🔑 `
+      : `Erişim doğrulanmadı. Lütfen [uygulama anahtarını sağlayın](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Geri Dön",

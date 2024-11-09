@@ -7,8 +7,8 @@ const it: PartialLocaleType = {
   WIP: "Questa funzione è in fase di sviluppo...",
   Error: {
     Unauthorized: isApp
-      ? `Accesso non verificato. Si prega di [fornire la chiave dell'app](/#/auth)🔑 `
-      : `Accesso non verificato. Si prega di [fornire la chiave dell'app](/#/auth)🔑 `,
+      ? `Accesso non verificato. Si prega di [fornire la chiave dell'app](/#/settings)🔑 `
+      : `Accesso non verificato. Si prega di [fornire la chiave dell'app](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Ritorna",

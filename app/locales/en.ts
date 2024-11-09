@@ -8,8 +8,8 @@ const en: LocaleType = {
   WIP: "This feature is under development...",
   Error: {
     Unauthorized: isApp
-      ? `Access not yet authorized. Please [enter app key](/#/auth)🔑 `
-      : `Access not yet authorized. Please [enter app key](/#/auth)🔑 `,
+      ? `Access not yet authorized. Please [enter app key](/#/settings)🔑 `
+      : `Access not yet authorized. Please [enter app key](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Back",

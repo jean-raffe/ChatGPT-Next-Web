@@ -7,8 +7,8 @@ const cs: PartialLocaleType = {
   WIP: "Tato funkce je stále ve vývoji...",
   Error: {
     Unauthorized: isApp
-      ? `Přístup nebyl ověřen, prosím [poskytněte aplikační klíč](/#/auth)🔑 `
-      : `Přístup nebyl ověřen, prosím [poskytněte aplikační klíč](/#/auth)🔑 `,
+      ? `Přístup nebyl ověřen, prosím [poskytněte aplikační klíč](/#/settings)🔑 `
+      : `Přístup nebyl ověřen, prosím [poskytněte aplikační klíč](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Zpět",

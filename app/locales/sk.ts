@@ -8,8 +8,8 @@ const sk: PartialLocaleType = {
   WIP: "Táto funkcia je stále vo vývoji...",
   Error: {
     Unauthorized: isApp
-      ? `Prístup nebol overený. Prosím [poskytnite kľúč aplikácie](/#/auth)🔑 `
-      : `Prístup nebol overený. Prosím [poskytnite kľúč aplikácie](/#/auth)🔑 `,
+      ? `Prístup nebol overený. Prosím [poskytnite kľúč aplikácie](/#/settings)🔑 `
+      : `Prístup nebol overený. Prosím [poskytnite kľúč aplikácie](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Späť",

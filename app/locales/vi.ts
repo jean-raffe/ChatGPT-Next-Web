@@ -7,8 +7,8 @@ const vi: PartialLocaleType = {
   WIP: "Tính năng này vẫn đang được phát triển...",
   Error: {
     Unauthorized: isApp
-      ? `Quyền truy cập chưa được xác minh. Vui lòng [cung cấp khóa ứng dụng](/#/auth)🔑 `
-      : `Quyền truy cập chưa được xác minh. Vui lòng [cung cấp khóa ứng dụng](/#/auth)🔑 `,
+      ? `Quyền truy cập chưa được xác minh. Vui lòng [cung cấp khóa ứng dụng](/#/settings)🔑 `
+      : `Quyền truy cập chưa được xác minh. Vui lòng [cung cấp khóa ứng dụng](/#/settings)🔑 `,
   },
   Auth: {
     Return: "Trở lại",
