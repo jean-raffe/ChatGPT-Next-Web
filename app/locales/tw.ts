@@ -361,7 +361,7 @@ const tw = {
         ApiKey: {
           Title: "API 金鑰",
           SubTitle: "從 Google AI 取得您的 API 金鑰",
-          Placeholder: "輸入您的 Google AI Studio API 金鑰",
+          Placeholder: "Google AI Studio API_KEY",
         },
 
         Endpoint: {
