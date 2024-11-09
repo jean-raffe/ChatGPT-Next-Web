@@ -9,8 +9,8 @@ const en: LocaleType = {
   WIP: "This feature is under development...",
   Error: {
     Unauthorized: isApp
-      ? `Access not yet authorized. Please [enter app key]🔑 (/#/auth)`
-      : `Access not yet authorized. Please [enter app key]🔑 (/#/auth)`,
+      ? `Access not yet authorized. Please [enter app key](/#/auth)🔑 `
+      : `Access not yet authorized. Please [enter app key](/#/auth)🔑 `,
   },
   Auth: {
     Return: "Back",
@@ -307,18 +307,10 @@ const en: LocaleType = {
       NoAccess: "Enter API Key to check balance",
     },
     Access: {
-      SaasStart: {
-        Title: "Use NextChat AI",
-        Label: " (Most Cost-Effective Option)",
-        SubTitle:
-          "Maintained by NextChat, zero setup needed, unlock OpenAI o1, GPT-4o," +
-          " Claude-3.5 and more",
-        ChatNow: "Start Now",
-      },
       AccessCode: {
-        Title: "Access Code",
-        SubTitle: "Access control Enabled",
-        Placeholder: "Enter Code",
+        Title: "App Key Required",
+        SubTitle: "Session requires an authentication key",
+        Placeholder: "Enter authentication key",
       },
       CustomEndpoint: {
         Title: "Custom Endpoint",
@@ -567,7 +559,7 @@ const en: LocaleType = {
   },
   Store: {
     DefaultTopic: "New Conversation",
-    BotHello: "Hello! How can I assist you today?",
+    BotHello: " You're my most beautiful serendipity. ",
     Error: "Something went wrong, please try again later.",
     Prompt: {
       History: (content: string) =>
