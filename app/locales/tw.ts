@@ -7,8 +7,8 @@ const tw = {
   WIP: "此功能仍在開發中……",
   Error: {
     Unauthorized: isApp
-      ? `當前尚未驗證訪問權限，請[提供應用密鑰]🔑 (/#/auth)`
-      : `當前尚未驗證訪問權限，請[提供應用密鑰]🔑 (/#/auth)`,
+      ? `當前尚未驗證訪問權限，請[提供應用密鑰](/#/auth)🔑 `
+      : `當前尚未驗證訪問權限，請[提供應用密鑰](/#/auth)🔑 `,
   },
   Auth: {
     Return: "返回",
@@ -290,18 +290,10 @@ const tw = {
     },
 
     Access: {
-      SaasStart: {
-        Title: "使用 NextChat AI",
-        Label: "(性價比最高的方案)",
-        SubTitle:
-          "由 NextChat 官方維護，無須設定開箱即用，支援 OpenAI o1、GPT-4o、Claude-3.5 等最新的大型語言模型",
-        ChatNow: "立刻開始對話",
-      },
-
       AccessCode: {
-        Title: "存取密碼",
-        SubTitle: "管理員已開啟加密存取",
-        Placeholder: "請輸入存取密碼",
+        Title: "需要應用密鑰",
+        SubTitle: "會話需要應用驗證密鑰",
+        Placeholder: "驗證密鑰",
       },
       CustomEndpoint: {
         Title: "自訂 API 端點 (Endpoint)",
@@ -407,8 +399,8 @@ const tw = {
     },
   },
   Store: {
-    DefaultTopic: "新的對話",
-    BotHello: "請問需要我的協助嗎？",
+    DefaultTopic: " New Conversation ",
+    BotHello: " You're my most beautiful serendipity. ",
     Error: "出錯了，請稍後再嘗試",
     Prompt: {
       History: (content: string) =>
