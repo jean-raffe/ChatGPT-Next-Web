@@ -2,6 +2,7 @@ import styles from "./auth.module.scss";
 import { IconButton } from "./button";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Path } from "../constant";
 import { useAccessStore } from "../store";
 import Locale from "../locales";
 import Delete from "../icons/close.svg";
