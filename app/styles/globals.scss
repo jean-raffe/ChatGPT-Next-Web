@@ -24,7 +24,6 @@
 
 @mixin dark {
   --theme: dark;
-
   /* 主要背景色 - 由深到浅的层次 */
   --bg-deepest: rgb(13, 13, 13);    /* 最深的背景，用于整体背景 */
   --bg-deeper: rgb(18, 18, 18);     /* 次深背景，用于侧边栏 */
@@ -32,48 +31,51 @@
   --bg-elevated: rgb(28, 28, 28);   /* 抬升背景，用于卡片等 */
   --bg-hover: rgba(255, 255, 255, 0.05);  /* 悬浮态背景 */
 
-  /* 文字颜色 - 不同层级 */
-  --text-primary: rgba(255, 255, 255, 0.95);   /* 主要文字 */
-  --text-secondary: rgba(255, 255, 255, 0.7);  /* 次要文字 */
-  --text-tertiary: rgba(255, 255, 255, 0.45);  /* 辅助文字 */
-  --text-disabled: rgba(255, 255, 255, 0.3);   /* 禁用状态文字 */
+  /* 金色文字系统 - 不同层级 */
+  --text-primary: rgb(234, 197, 103);     /* 主要文字，标准金色 */
+  --text-secondary: rgb(207, 171, 83);    /* 次要文字，稍深金色 */
+  --text-tertiary: rgb(180, 149, 73);     /* 辅助文字，深金色 */
+  --text-disabled: rgba(234, 197, 103, 0.3); /* 禁用状态，透明金色 */
 
-  /* 主题色 - 金色系 */
-  --primary-deep: rgb(217, 175, 85);     /* 深金色 */
-  --primary-base: rgb(234, 197, 103);    /* 标准金色 */
-  --primary-light: rgb(250, 218, 141);   /* 浅金色 */
-  --primary-bg: rgba(234, 197, 103, 0.1); /* 金色背景 */
+  /* 主题色 - 扩展金色系统 */
+  --gold-brightest: rgb(255, 236, 179);  /* 最亮金色，用于强调 */
+  --gold-bright: rgb(250, 218, 141);     /* 明亮金色，用于hover状态 */
+  --gold-base: rgb(234, 197, 103);       /* 标准金色，主要用色 */
+  --gold-medium: rgb(207, 171, 83);      /* 中等金色，次要用色 */
+  --gold-deep: rgb(180, 149, 73);        /* 深金色，边框等 */
+  --gold-deepest: rgb(153, 127, 62);     /* 最深金色，特殊强调 */
 
-  /* 边框和分割线 */
-  --border-primary: rgba(255, 255, 255, 0.1);   /* 主要边框 */
-  --border-secondary: rgba(255, 255, 255, 0.05); /* 次要边框 */
+  /* 金色背景变体 */
+  --gold-bg-light: rgba(234, 197, 103, 0.1);  /* 浅金色背景 */
+  --gold-bg-medium: rgba(207, 171, 83, 0.15); /* 中等金色背景 */
+  --gold-bg-deep: rgba(180, 149, 73, 0.2);    /* 深金色背景 */
 
-  /* 功能色 */
+  /* 边框和分割线 - 金色系 */
+  --border-primary: rgba(180, 149, 73, 0.3);    /* 主要边框，深金色 */
+  --border-secondary: rgba(180, 149, 73, 0.15); /* 次要边框，淡金色 */
+
+  /* 功能色保持不变 */
   --success: rgb(83, 186, 137);
   --warning: rgb(229, 159, 64);
   --danger: rgb(222, 93, 93);
   --info: rgb(77, 153, 235);
 
-  /* 滚动条 */
-  --bar-color: rgba(255, 255, 255, 0.1);
+  /* 金色阴影效果 */
+  --shadow-base: 0 4px 12px rgba(234, 197, 103, 0.1);
+  --shadow-elevated: 0 8px 24px rgba(234, 197, 103, 0.15);
 
-  /* 阴影 */
-  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.6);
-
-  /* 覆盖原有变量以保持兼容 */
   --white: var(--bg-base);
-  --black: var(--text-primary);
+  --black: var(--gold-base);
   --gray: var(--bg-deepest);
-  --primary: var(--primary-base);
+  --primary: var(--gold-base);
   --second: var(--bg-deeper);
-  --hover-color: var(--bg-hover);
+  --hover-color: var(--gold-bg-light);
   --theme-color: var(--bg-deepest);
   --border-in-light: 1px solid var(--border-primary);
 
-  /* SVG 图标处理 */
+  /* SVG 图标处理 - 调整为金色 */
   div:not(.no-dark) > svg {
-    filter: invert(0.8) sepia(0.3) saturate(1.5) hue-rotate(-5deg);
+    filter: invert(0.8) sepia(0.5) saturate(2) hue-rotate(5deg);
   }
 }
 
@@ -91,7 +93,7 @@
     box-shadow: var(--shadow-base);
   }
 
-  /* 渐变边框效果 */
+  /* 金色渐变边框效果 */
   .gradient-border {
     position: relative;
     &::before {
@@ -101,8 +103,8 @@
       padding: 1px;
       background: linear-gradient(
         45deg,
-        var(--primary-deep),
-        var(--primary-light)
+        var(--gold-deep),
+        var(--gold-brightest)
       );
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
                     linear-gradient(#fff 0 0);
@@ -114,11 +116,20 @@
     }
   }
 
-  /* 毛玻璃效果 */
+  /* 金色毛玻璃效果 */
   .glass {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(234, 197, 103, 0.05);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* 金色悬浮效果 */
+  .hover-gold {
+    transition: all 0.3s ease;
+    &:hover {
+      color: var(--gold-brightest);
+      background: var(--gold-bg-light);
+    }
   }
 }
 
